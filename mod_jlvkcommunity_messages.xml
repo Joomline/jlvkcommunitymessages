@@ -7,7 +7,7 @@
 	<authorUrl>http://www.joomline.net</authorUrl>
 	<copyright>Copyright 2016 JoomLine.net All rights reserved!</copyright>
 	<license>license GNU/GPL: http://www.gnu.org/copyleft/gpl.html </license>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<description>MOD_JLVKCOMMUNITY_MESSAGES_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_jlvkcommunity_messages">mod_jlvkcommunity_messages.php</filename>
@@ -26,11 +26,35 @@
 		<fields name="params">
           <fieldset name="basic">
 			<field name="group_id" type="text" label="MOD_JLVKCOMMUNITY_MESSAGES_IDVK_LABEL" description="MOD_JLVKCOMMUNITY_MESSAGES_IDVK_DESCRIPTION" default="17291036"/>
-			<field name="mode" type="radio" label="MOD_JLVKCOMMUNITY_MESSAGES_MODE_LABEL" default="1">
-				<option value="1">MOD_JLVKCOMMUNITY_MESSAGES_NO</option>
-				<option value="0">MOD_JLVKCOMMUNITY_MESSAGES_YES</option>				
-			</field>		
-			<field name="link" type="radio" label="MOD_JLVKCOMMUNITY_MESSAGES_LINK_LABEL" description="MOD_JLVKCOMMUNITY_MESSAGES_LINK_DESCRIPTION" default="0">
+			<field name="expanded" type="list" label="MOD_JLVKCOMMUNITY_MESSAGES_EXPANDED_LABEL" default="1">
+				<option value="0">MOD_JLVKCOMMUNITY_MESSAGES_NO</option>
+				<option value="1">MOD_JLVKCOMMUNITY_MESSAGES_FAST</option>
+				<option value="5000">MOD_JLVKCOMMUNITY_MESSAGES_5S</option>	
+				<option value="10000">MOD_JLVKCOMMUNITY_MESSAGES_10S</option>
+				<option value="15000">MOD_JLVKCOMMUNITY_MESSAGES_15S</option>
+				<option value="30000">MOD_JLVKCOMMUNITY_MESSAGES_30S</option>
+				<option value="60000">MOD_JLVKCOMMUNITY_MESSAGES_60S</option>
+				<option value="120000">MOD_JLVKCOMMUNITY_MESSAGES_120S</option>				
+			</field>
+			<field name="widgetPosition" type="radio" label="MOD_JLVKCOMMUNITY_MESSAGES_POSITION" default="right" class="btn-group btn-group-yesno">
+				<option value="left">MOD_JLVKCOMMUNITY_MESSAGES_RIGHT</option>
+				<option value="right">MOD_JLVKCOMMUNITY_MESSAGES_LEFT</option>				
+			</field>
+			<field name="disableButtonTooltip" type="radio" label="MOD_JLVKCOMMUNITY_MESSAGES_HINT" default="1" class="btn-group btn-group-yesno">
+				<option value="0">MOD_JLVKCOMMUNITY_MESSAGES_NO</option>
+				<option value="1">MOD_JLVKCOMMUNITY_MESSAGES_YES</option>				
+			</field>
+			<field name="tooltipButtonText" type="text" label="MOD_JLVKCOMMUNITY_MESSAGES_HINT_TEXT"  default="Поговори со мной :-)"/>
+			<field name="disableNewMessagesSound" type="radio" label="MOD_JLVKCOMMUNITY_MESSAGES_MSG_SOUND" default="1" class="btn-group btn-group-yesno">
+				<option value="0">MOD_JLVKCOMMUNITY_MESSAGES_NO</option>
+				<option value="1">MOD_JLVKCOMMUNITY_MESSAGES_YES</option>				
+			</field>
+			<field name="disableExpandChatSound" type="radio" label="MOD_JLVKCOMMUNITY_MESSAGES_CHAT_SOUND" default="1" class="btn-group btn-group-yesno">
+				<option value="0">MOD_JLVKCOMMUNITY_MESSAGES_NO</option>
+				<option value="1">MOD_JLVKCOMMUNITY_MESSAGES_YES</option>				
+			</field>
+				
+			<field name="link" type="radio" label="MOD_JLVKCOMMUNITY_MESSAGES_LINK_LABEL" description="MOD_JLVKCOMMUNITY_MESSAGES_LINK_DESCRIPTION" default="0" class="btn-group btn-group-yesno">
 				<option value="0">MOD_JLVKCOMMUNITY_MESSAGES_NO</option>
 				<option value="1">MOD_JLVKCOMMUNITY_MESSAGES_YES</option>
 			</field>
